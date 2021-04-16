@@ -1,0 +1,26 @@
+table {
+    border-color: rgb(223, 25, 91);
+    margin-top: 40px;
+}
+
+.one,.two,.tree,.four,.five,.six,.seven,.eight,.nine,.ten,.eleven {
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.twelve,.thirteen {
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+select {
+    width: 95px;
+}
+
+caption {
+    margin-bottom: 20px;
+}
