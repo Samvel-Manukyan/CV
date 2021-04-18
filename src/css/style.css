@@ -27,6 +27,8 @@ tbody tr:before {
     border: 1px solid rgb(223, 25, 91);
     counter-increment: table;
     content: "" counter(table) ".";
+    display: inline-block;
+    width: 25px;
     
 }
 
@@ -34,16 +36,26 @@ select {
     width: 95px;
 }
 
-.one, .two, .tree, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+.th_1, .th_2, .th_3, .th_4, .th_5, .th_6,
+.th_7, .th_8, .th_9, .th_10, .th_11 {
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
     text-align: right;
     padding-right: 18px;
 }
 
-.twelve,.thirteen {
+.th_mobile_phone,.th_skaype {
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
     text-align: right;
     padding-right: 20px;
+}
+
+.select_good, .select_excellent,
+.select_satisfactory {
+    margin-left: 35px;
+}
+
+.select_excellent_4, .select_good_4 {
+    margin-left: 52px;
 }
