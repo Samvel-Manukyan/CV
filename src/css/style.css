@@ -1,8 +1,7 @@
 body {
     border: 1px solid rgb(223, 25, 91);
     width: 70%;
-    margin: 0 auto;
-    margin-top: 45px;
+    margin: 80px auto;
 }
 
 table {
@@ -18,11 +17,6 @@ caption {
     font-weight: bold;
 }
 
-img {
-    width: 100%;
-    height: 88px;
-}
-
 tbody tr:before {
     border: 1px solid rgb(223, 25, 91);
     counter-increment: table;
@@ -34,6 +28,13 @@ tbody tr:before {
 
 select {
     width: 95px;
+}
+
+.td_img {
+    background-image: url('../img/Lendrush.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .th_1, .th_2, .th_3, .th_4, .th_5, .th_6,
@@ -51,11 +52,32 @@ select {
     padding-right: 20px;
 }
 
+.th_footer {
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.th_footer_1, .th_footer_2, .th_footer_3, .th_footer_4 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
 .select_good, .select_excellent,
-.select_satisfactory {
-    margin-left: 35px;
+.select_satisfactory, .select_good_4 {
+    width: 120px;
+    padding-left: 38px;
+    margin-left: 27px;
 }
 
 .select_excellent_4, .select_good_4 {
-    margin-left: 52px;
+    width: 120px;
+    margin-left: 35px;
+}
+
+.select_excellent, .select_excellent_4 {
+    padding-left: 28px;
+}
+
+.select_satisfactory {
+    padding-left: 20px;
 }
