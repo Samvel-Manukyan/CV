@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
+    <title>Curriculum Vitae</title>
     <link rel="shortcut icon" href="icons/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,68 +14,132 @@
             <caption title="Curriculum Vitae">Curriculum Vitae</caption>
             <tbody>
                 <tr>
-                    <th class="th_1" title="Surname, name:">Surname, Name:</th>
-                    <td colspan="3" title="Khachatryan Lendrush">Khachatryan Lendrush</td>
-                    <td class="td_img" rowspan="4"></td>
+                    <th title="Surname, name"><label for="sname">Surname, name</label></th>
+                    <td colspan="3" title="Khachatryan Lendrush">
+                        <input type="text" id="sname" name="Surname, name" value="Khachatryan Lendrush">
+                    </td>
+                    <td rowspan="4" class="td_img">
+                        <label class="user-img" for="user">
+                            <input class="input_image" type="file" id="user"
+                            name="lendrush.jpg" multiple accept="image/*">
+                        </label>
+                    </td>
                 </tr>
                 <tr>
-                    <th class="th_2" title="Birth date:">Birth date:</th>
-                    <td colspan="3" title="01/01/1992">01/01/1992</td>
+                    <th title="Birth date"><label for="bdate">Birth date</label></th>
+                    <td colspan="3" title="01/01/1992">
+                        <input class="input_date" type="date" id="bdate" value="1992-01-01">
+                    </td>
                 </tr>
                 <tr>
-                    <th class="th_3" title="Birth place:">Birth place:</th>
-                    <td colspan="3" title="Armenia Yerevan">Armenia Yerevan</td>
+                    <th title="Birth place"><label for="Birth place">Birth place</label></th>
+                    <td colspan="3" title="Armenia Yerevan">
+                        <select name="Birth place" id="Birth place">
+                            <option value="Armenia Yerevan">Armenia Yerevan</option>
+                            <option value="Artashat">Artashat</option>
+                            <option value="Masis">Masis</option>
+                            <option value="Vedi">Vedi</option>
+                            <option value="Ararat">Ararat</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
-                    <th class="th_4" title="Nationality:">Nationality:</th>
-                    <td colspan="3" title="Armenian">Armenian</td>
+                    <th title="Nationality"><label for="Nationality">Nationality</label></th>
+                    <td colspan="3" title="Armenian">
+                        <select name="Nationality" id="Nationality">
+                            <option value="Armenia">Armenia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="France">France</option>
+                        </select>
+                    </td>
                 </tr>
-                <tr>
-                    <th class="th_5" title="Home phone:">Home phone:</th>
-                    <td colspan="2" title="None">None</td>
-                    <th class="th_mobile_phone" title="Mobile phone:">Mobile phone:</th>
+                <tr class="home_phone">
+                    <th title="Home phone"><label for="hphone">Home phone</label></th>
+                    <td colspan="2" title="None">
+                        <input type="text" id="hphone" name="Home phone" value="None">
+                    </td>
+                    <th class="th_mobile_phone" title="Mobile phone:">Mobile phone</th>
                     <td><a href="tel:098556419" title="098556419">098556419</a></td>
                 </tr>
                 <tr>
-                    <th class="th_6" title="Email:">Email:</th>
-                    <td colspan="2"><a href="mailto:Khachatryan@gmail.com" title="Khachatryan@gmail.com">Khachatryan@gmail.com</a></td>
-                    <th class="th_skaype" title="Skaype:">Skaype:</th>
+                    <th title="Email"><label for="email">Email</label></th>
+                    <td colspan="2">
+                        <a href="mailto:Khachatryan@gmail.com" 
+                        title="Khachatryan@gmail.com">
+                        <input type="email" id="email" name="email" value="Khachatryan@gmail.com">
+                        </a>
+                    </td>
+                    <th class="th_skaype" title="Skype:">Skype</th>
                     <td><a href="tel:098556419" title="Lendrush">Lendrush</a></td>
                 </tr>
                 <tr>
-                    <th class="th_7" title="Proficincy level:">Proficincy level:</th>
-                    <td colspan="4" title="&TYRO& beginer novis rookie">&TYRO& "beginer" ['novis] rookie</td>
+                    <th title="Proficincy level">Proficincy level</th>
+                    <td colspan="4" 
+                    title="&TYRO& beginer novis rookie">&TYRO& "beginer" ['novis] rookie
+                </td>
                 </tr>
                 <tr>
-                    <th class="th_8" title="Working experiens:">Working experiens:</th>
-                    <td colspan="4" title="None">None</td>
-                </tr>
-                <tr>
-                    <th class="th_9" title="ML prowers:">ML prowers:</th>
-                    <td colspan="4">
-                        <a href="https://en.wikipedia.org/wiki/XML" target="_blank"><abbr title="Extensible Markup Language">XML,</abbr></a>
-                        <a href="https://de.wikipedia.org/wiki/HTA" target="_blank"><abbr title="Health Technology Assessment">HTA,</abbr></a>
-                        <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank"><abbr title="HyperText Markup Language">HTML,</abbr></a>
-                        <a href="https://en.wikipedia.org/wiki/XHTML" target="_blank"><abbr title="Extensible HyperText Markup Language">XHTML,</abbr></a>
-                        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank"><abbr title="Cascading Style Sheets">CSS,</abbr></a>
-                        <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank"><abbr title="Scalable Vector Graphics">SVG,</abbr></a>
+                    <th title="Working experiens"><label for="wexperiens">Working experiens</label></th>
+                    <td colspan="4" title="None">
+                        <input type="text" id="wexperiens" name="Working experiens" value="None">
                     </td>
                 </tr>
                 <tr>
-                    <th class="th_10" title="Programing skile:">Programing skile:</th>
+                    <th title="Markup Language prowers">ML prowers</th>
                     <td colspan="4">
-                        <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><abbr title="JavaScript">JS,</abbr></a>
-                        <a href="https://wiki.selfhtml.org/wiki/JavaScript/Tutorials/OOP" target="_blank"><abbr title="JavaScript Object-oriented programming">JS OOP,</abbr></a>
-                        <a href="https://ru.wikipedia.org/wiki/Document_Object_Model" target="_blank"><abbr title="Document Object Model">DOM,</abbr></a>
-                        <a href="https://ru.wikipedia.org/wiki/BOM" target="_blank"><abbr title="Bill of Materials">BOM,</abbr></a>
-                        <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank"><abbr title="Programming Language">C,</abbr></a>
-                        <a href="https://en.wikipedia.org/wiki/Ajax_(programming)" target="_blank"><abbr title="Asynchronous JavaScript and XML">AJAX,</abbr></a>
-                        <a href="https://en.wikipedia.org/wiki/Sol" target="_blank"><abbr title="The Shadows of Luclin">SOL,</abbr></a>
+                        <a href="https://en.wikipedia.org/wiki/XML" target="_blank">
+                            <abbr title="Extensible Markup Language">XML,</abbr>
+                        </a>
+                        <a href="https://de.wikipedia.org/wiki/HTA" target="_blank">
+                            <abbr title="Health Technology Assessment">HTA,</abbr>
+                        </a>
+                        <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank">
+                            <abbr title="HyperText Markup Language">HTML,</abbr>
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/XHTML" target="_blank">
+                            <abbr title="Extensible HyperText Markup Language">XHTML,</abbr>
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">
+                            <abbr title="Cascading Style Sheets">CSS,</abbr>
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">
+                            <abbr title="Scalable Vector Graphics">SVG</abbr>
+                        </a>
                     </td>
                 </tr>
                 <tr>
-                    <th class="th_11" title="Other:">Other:</th>
-                    <td colspan="4" title="Music, Football, Ping pong">Music, Football, Ping pong</td>
+                    <th title="Programing skile">Programing skile</th>
+                    <td colspan="4">
+                        <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+                            <abbr title="JavaScript">JS,</abbr>
+                        </a>
+                        <a href="https://wiki.selfhtml.org/wiki/JavaScript/Tutorials/OOP" target="_blank">
+                            <abbr title="JavaScript Object-oriented programming">JS OOP,</abbr>
+                        </a>
+                        <a href="https://ru.wikipedia.org/wiki/Document_Object_Model" target="_blank">
+                            <abbr title="Document Object Model">DOM,</abbr>
+                        </a>
+                        <a href="https://ru.wikipedia.org/wiki/BOM" target="_blank">
+                            <abbr title="Browser Object Model">BOM,</abbr>
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">
+                            <abbr title="Programming Language">C,</abbr>
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Ajax_(programming)" target="_blank">
+                            <abbr title="Asynchronous JavaScript and XML">AJAX,</abbr>
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/Sol" target="_blank">
+                            <abbr title="The Shadows of Luclin">SOL</abbr>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th title="Other"><label for="ellipses">Other</label></th>
+                    <td class="ellipses" colspan="4" title="Music, Football, Ping pong">
+                        <div contenteditable="true" id="ellipses">
+                            Music, football, ping pong Music, football, ping pong
+                        </div>
+                    </td>
                 </tr>
             </tbody>
             <tfoot>
@@ -83,7 +147,7 @@
                     <th class="ty" colspan="2" title="Languages">Languages</th>
                     <th title="Reading">Reading</th>
                     <th title="Writing">Writing</th>
-                    <th title="Cominication">Cominication</th>
+                    <th title="Communication">Communication</th>
                     <th title="Understanding">Understanding</th>
                 </tr>
                 <tr>
@@ -149,7 +213,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan="2" title="Englsh">Englsh</th>
+                    <th colspan="2" title="English">English</th>
                     <td>
                         <select>
                             <option>Good</option>
