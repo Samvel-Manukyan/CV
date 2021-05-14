@@ -1,10 +1,11 @@
 table {
     width: 60vw;
     max-width: 1200px;
+    top: 0;
     border-color: rgb(223, 25, 91);
     border-collapse: collapse;
     counter-reset: table;
-    animation: table 5s linear infinite;
+    animation: rotate 5s linear ;
 }
 
 caption {
@@ -110,15 +111,6 @@ input:focus {
     padding-right: 20px;
 }
 
-.th_footer {
-    font-weight: 900;
-}
-
-.th_footer_1, .th_footer_2, .th_footer_3, .th_footer_4 {
-    font-weight: 900;
-    font-style: italic;
-}
-
 .input_image {
     display: none;
 }
@@ -147,11 +139,11 @@ input:focus {
     }
 }
 
- @keyframes table {
+@keyframes rotate {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg) scale(2) translateX(150px);
     }
     to { 
-      transform: rotate(360deg);
+        transform: rotate(360deg) scale(1) translateX(0px);
     }
 }
