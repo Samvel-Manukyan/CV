@@ -5,21 +5,24 @@ table {
     border-color: rgb(223, 25, 91);
     border-collapse: collapse;
     counter-reset: table;
+    background-color: burlywood;
     animation: rotate 5s linear ;
 }
 
 caption {
+    padding: 40px;
     border-collapse: collapse;
     border: 1px solid rgb(223, 25, 91);
     border-bottom: unset;
     font-size: 20px;
     font-weight: bold;
-    padding: 40px;
+    background-color: burlywood;
 }
 
 tbody tr:before {
+    width: 20px;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 19px;
     margin: 0;
     display: inline-block;
     counter-increment: table;
@@ -70,16 +73,23 @@ input {
     height: 13px;
 }
 
+body {
+    overflow: hidden;
+}
+
 input:focus {
     background-color: greenyellow;
     transition: 0.5s;
 }
 
 .container {
+    position: relative;
     min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color: blue;
 }
 
 .ellipses div {
@@ -115,6 +125,53 @@ input:focus {
     display: none;
 }
 
+.wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 935px;
+    height: 935px;
+    border: black 10px solid;
+    border-radius: 100%;
+    animation-name: ripple;
+    animation-delay: 3.8s;
+    animation-duration: 3s;
+}
+
+.wave:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 935px;
+    height: 935px;
+    border: black 10px solid;
+    border-radius: 100%;
+    animation-name: ripple_1;
+    animation-delay: 4.3s;
+    animation-duration: 3s;
+}
+
+.wave:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 935px;
+    height: 935px;
+    border: black 10px solid;
+    border-radius: 100%;
+    animation-name: ripple_2;
+    animation-delay: 4.8s;
+    animation-duration: 3s;
+}
+
 @media (max-width: 1200px) {
     th {
         font-size: 17px;
@@ -133,17 +190,60 @@ input:focus {
     th {
         white-space: nowrap;
     }
+    tbody tr:before {
+        width: 24px;
+    }
     .user-img {
         height: 96px;
         min-width: 100%;
     }
+    .container {
+        overflow: scroll;
+        overflow-x: scroll;
+    }
 }
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg) scale(2) translateX(150px);
+    0% {
+        transform: rotate(0deg) scale(2);
     }
-    to { 
-        transform: rotate(360deg) scale(1) translateX(0px);
+    75% {
+        transform: rotate(370deg) scale(1);
+    }
+    100% { 
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes ripple {
+    from {
+        opacity: 0.5;
+    }
+    to {
+      width: 1700px;
+      height: 1700px;
+      opacity: 0.1;
+    }
+}
+
+@keyframes ripple_1 {
+    from {
+        opacity: 1;
+    }
+    to {
+      width: 1700px;
+      height: 1700px;
+      opacity: 0.1;
+    }
+}
+
+@keyframes ripple_2 {
+    from {
+        opacity: 1;
+    }
+    to {
+      width: 1900px;
+      height: 1900px;
+      opacity: 0.1;
     }
 }
