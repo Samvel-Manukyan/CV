@@ -19,6 +19,12 @@ caption {
     font-size: 20px;
     font-weight: bold;
     background-color: moccasin;
+    clip-path: polygon(0px 0px,-5px 0,-3px 0,0px 31px,
+    10px 28px,15px 26px,17px 25px,10px 17px,10px -13px,30px 4px,30px 16px,
+    26px 20px,22px 24px,35px 27px,33px 32px,42px 24px,44px 24px,38px 32px,
+    29px 43px,35px 41px,27px 41px,21px 36px,22px 33px,26px 34px,30px 36px,
+    33px 32px,31px 30px,29px 33px,38px 28px,19px 34px,19px 53px,23px 44px,
+    41px 40px,-11px 37px,-5px 613px,817px 607px,825px -10px,-24px -10px,-13px 25px);
 }
 
 caption::before {
@@ -38,7 +44,6 @@ caption::before {
 body {
     background-color: blue;
     overflow: hidden;
-    
 }
 
 tbody th {
@@ -168,8 +173,8 @@ select:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    width: 945px;
-    height: 945px;
+    width: 948px;
+    height: 948px;
     border: black 10px solid;
     border-radius: 100%;
     animation-name: ripple;
@@ -184,8 +189,8 @@ select:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    width: 945px;
-    height: 945px;
+    width: 948px;
+    height: 948px;
     border: black 10px solid;
     border-radius: 100%;
     animation-name: ripple_1;
@@ -200,8 +205,8 @@ select:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    width: 945px;
-    height: 945px;
+    width: 948px;
+    height: 948px;
     border: black 10px solid;
     border-radius: 100%;
     animation-name: ripple_2;
@@ -214,70 +219,27 @@ select:hover {
     z-index: -1;
     width: 10px;
     height: 10px;
-    border-radius: 5px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: yellow;
     opacity: 0;
     animation-name: wet;
-    animation-delay: 5s;
+    animation-delay: 4.9s;
     animation-duration: 6s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-}
-
-@keyframes wet {
-    from {
-        opacity: 1;
-    }
-    to {
-        width: 820px;
-        height: 464px;
-        opacity: 1;
-    }
-}
-
-@media (max-width: 1200px) {
-    th {
-        font-size: 17px;
-    }
-    input {
-        height: 20px;
-        font-size: 17px;
-    }
-    select {
-        width: 115px;
-        font-size: 12px;
-    }
-    caption {
-        padding: 0 10px;
-    }
-    th {
-        white-space: nowrap;
-    }
-    tbody tr:before {
-        width: 24px;
-    }
-    .user-img {
-        height: 96px;
-        min-width: 100%;
-    }
-}
-
-@media (max-width: 800px) {
-    body {
-        overflow: scroll;
-    }
 }
 
 @keyframes rotate {
     0% {
         transform: rotate(0deg) scale(2);
     }
+
     75% {
         transform: rotate(370deg) scale(1);
     }
+
     100% { 
         transform: rotate(360deg) scale(1);
     }
@@ -287,6 +249,7 @@ select:hover {
     from {
         opacity: 0.5;
     }
+
     to {
       width: 1700px;
       height: 1700px;
@@ -298,6 +261,7 @@ select:hover {
     from {
         opacity: 1;
     }
+
     to {
       width: 1700px;
       height: 1700px;
@@ -309,6 +273,7 @@ select:hover {
     from {
         opacity: 1;
     }
+
     to {
       width: 1700px;
       height: 1700px;
@@ -320,7 +285,370 @@ select:hover {
     from {
         border-width: 0 70px 70px 0; 
     }
+
     to {
         border-width: 0 0 0 0;
+    }
+}
+
+@keyframes wet {
+    0% {
+        opacity: 1;
+        border-radius: 100%;
+    }
+
+    100% {
+        width: 820px;
+        height: 464px;
+        opacity: 1;
+        border-radius: 5px;
+        clip-path: polygon(0px 0px,-5px 0,-3px 0,0px 31px,
+        10px 28px,15px 26px,17px 25px,10px 17px,10px -13px,30px 4px,30px 16px,
+        26px 20px,22px 24px,35px 27px,33px 32px,42px 24px,44px 24px,38px 32px,
+        29px 43px,35px 41px,27px 41px,21px 36px,22px 33px,26px 34px,30px 36px,
+        33px 32px,31px 30px,29px 33px,38px 28px,19px 34px,19px 53px,23px 44px,
+        41px 40px,-11px 37px,-5px 613px,817px 607px,825px -10px,-24px -10px,-13px 25px);
+    }
+}
+
+@media (max-width: 1300px) {
+    tbody select {
+        width: 130px;
+        height: 19px;
+        text-align: left;
+        padding-left: 6px;
+        border-radius: 5px;
+    }
+
+    @keyframes wet {
+        from {
+            opacity: 1;
+            border-radius: 100%;
+        }
+
+        to {
+            width: 745px;
+            height: 469px;
+            opacity: 1;
+            border-radius: 5px;
+        }
+    }
+
+    .wave {
+        position: absolute;
+        z-index: -2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 890px;
+        height: 890px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple;
+        animation-delay: 3.8s;
+        animation-duration: 6s;
+    }
+    
+    .wave:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 890px;
+        height: 890px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple_1;
+        animation-delay: 4.4s;
+        animation-duration: 6s;
+    }
+    
+    .wave:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 890px;
+        height: 890px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple_2;
+        animation-delay: 5.1s;
+        animation-duration: 6s;
+    }
+}
+
+@media (max-width: 1200px) {
+    th {
+        font-size: 17px;
+    }
+
+    input {
+        height: 20px;
+        font-size: 17px;
+    }
+
+    select {
+        width: 115px;
+        font-size: 12px;
+    }
+    
+    th {
+        white-space: nowrap;
+    }
+
+    tbody tr:before {
+        width: 24px;
+    }
+
+    .user-img {
+        height: 96px;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    tbody select {
+        width: 120px;
+        height: 19px;
+        text-align: left;
+        padding-left: 6px;
+        border-radius: 5px;
+    }
+
+    @keyframes wet {
+        from {
+            opacity: 1;
+            border-radius: 100%;
+        }
+        to {
+            width: 726px;
+            height: 468px;
+            opacity: 1;
+            border-radius: 5px;
+        }
+    }
+
+    .wave {
+        position: absolute;
+        z-index: -2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 865px;
+        height: 865px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple;
+        animation-delay: 3.8s;
+        animation-duration: 6s6
+    }
+    
+    .wave:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 865px;
+        height: 865px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple_1;
+        animation-delay: 4.4s;
+        animation-duration: 6s;
+    }
+    
+    .wave:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 865px;
+        height: 865px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple_2;
+        animation-delay: 5.1s;
+        animation-duration: 6s;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        animation: rotate 5s linear;
+        overflow-y: scroll;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg) scale(2);
+            overflow: hidden;
+        }
+
+        75% {
+            transform: rotate(370deg) scale(1);
+        }
+
+        100% { 
+            transform: rotate(360deg) scale(1);
+            overflow: hidden;
+        }
+    }
+
+    @keyframes wet {
+        from {
+            opacity: 1;
+            border-radius: 100%;
+        }
+
+        to {
+            width: 729px;
+            height: 474px;
+            opacity: 1;
+            border-radius: 5px;
+        }
+    }
+
+    .wave {
+        position: absolute;
+        z-index: -2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 868px;
+        height: 868px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple;
+        animation-delay: 3.8s;
+        animation-duration: 6s;
+    }
+    
+    .wave:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 868px;
+        height: 868px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple_1;
+        animation-delay: 4.4s;
+        animation-duration: 6s;
+    }
+    
+    .wave:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 868px;
+        height: 868px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple_2;
+        animation-delay: 5.1s;
+        animation-duration: 6s;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        animation: rotate 5s linear;
+        overflow-y: scroll;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg) scale(2);
+            overflow: hidden;
+        }
+
+        75% {
+            transform: rotate(370deg) scale(1);
+        }
+
+        100% { 
+            transform: rotate(360deg) scale(1);
+            overflow: hidden;
+        }
+    }
+
+    @keyframes wet {
+        from {
+            opacity: 1;
+            border-radius: 100%;
+        }
+        
+        to {
+            width: 726px;
+            height: 467px;
+            opacity: 1;
+            border-radius: 5px;
+        }
+    }
+
+    .wave {
+        position: absolute;
+        z-index: -2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 830px;
+        height: 830px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple;
+        animation-delay: 3.8s;
+        animation-duration: 6s;
+    }
+    
+    .wave:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 830px;
+        height: 830px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple_1;
+        animation-delay: 4.4s;
+        animation-duration: 6s;
+    }
+    
+    .wave:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        width: 830px;
+        height: 830px;
+        border: black 10px solid;
+        border-radius: 100%;
+        animation-name: ripple_2;
+        animation-delay: 5.1s;
+        animation-duration: 6s;
     }
 }
