@@ -30,17 +30,14 @@ caption {
 }
 
 caption::before {
-    content:"";
+    content: "";
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     border-style: solid;
     border-width: 0 70px 70px 0;
-    border-color: #ddd blue;
-    animation-name: fold;
-    animation-delay: 9.3s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    border-color: #ddd #0000ff;
+    animation: 3s 9.3s forwards fold;
 }
 
 body {
@@ -64,7 +61,7 @@ tbody tr:before {
     content: "" counter(table) ".";
 }
 
-tbody tr th:after {
+tbody th:after {
     content: ":"
 }
 
@@ -111,22 +108,6 @@ input {
     border-radius: 5px;
 }
 
-/* input:focus {
-    background-color: greenyellow;
-    transition: 0.5s;
-}
-
-select:focus {
-    background-color: greenyellow;
-    transition: 0.5s;
-}
-
-select:hover {
-    width: 100%;
-    background-color: greenyellow;
-    transition: 0.5s;
-} */
-
 .container {
     position: relative;
     min-height: 95vh;
@@ -142,7 +123,7 @@ select:hover {
     white-space: nowrap;
 }
 
-.user-img {
+.user_img {
     height: 86px;
     min-width: 100%;
     display: flex;
@@ -154,7 +135,7 @@ select:hover {
 }
 
 .td_img {
-    padding: 0px 0px 0px 0px;
+    padding: 0 0 0 0;
 }
 
 .th_mobile_phone, .th_skaype {
@@ -231,6 +212,13 @@ select:hover {
     animation-duration: 6.39s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    clip-path: polygon(0px 0px,-5px 0,-3px 0,0px 31px,10px 28px,
+    15px 26px,17px 25px,10px 17px,10px -13px,30px 4px,
+    30px 16px,26px 20px,22px 24px,35px 27px,33px 32px,42px 24px,
+    44px 24px,38px 32px,29px 43px,35px 41px,27px 41px,21px 36px,
+    22px 33px,26px 34px,30px 36px,33px 32px,31px 30px,29px 33px,
+    38px 28px,19px 34px,19px 53px,23px 44px,41px 40px,-11px 37px,
+    -5px 613px,817px 607px,811px -10px,-24px -10px,-13px 25px);
 }
 
 @keyframes rotate {
@@ -297,17 +285,10 @@ select:hover {
     0% {
         opacity: 1;
         border-radius: 100%;
-        clip-path: none;
+        clip-path: unset;
     }
 
     100% {
-        clip-path: polygon(0px 0px,-5px 0,-3px 0,0px 31px,10px 28px,
-        15px 26px,17px 25px,10px 17px,10px -13px,30px 4px,
-        30px 16px,26px 20px,22px 24px,35px 27px,33px 32px,42px 24px,
-        44px 24px,38px 32px,29px 43px,35px 41px,27px 41px,21px 36px,
-        22px 33px,26px 34px,30px 36px,33px 32px,31px 30px,29px 33px,
-        38px 28px,19px 34px,19px 53px,23px 44px,41px 40px,-11px 37px,
-        -5px 613px,817px 607px,811px -10px,-24px -10px,-13px 25px);
         width: 800px;
         height: 503px;
         opacity: 1;
